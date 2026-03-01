@@ -2,7 +2,7 @@
 <style>
   .logo-fill { fill: #373737; }
   @media (prefers-color-scheme: dark) {
-    .logo-fill { fill: white; }
+    .logo-fill { fill: #e0e0e0; }
   }
 </style>
 <g clip-path="url(#clip0)">

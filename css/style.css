@@ -29,7 +29,7 @@
   --accent: #d54d33;
   --interactive: #ABABAB;
   --interactive-hover: #047AFE;
-  --post-title-color: #808080;
+  --post-title-color: #373737;
 }
 
 [data-theme="dark"] {
@@ -43,7 +43,17 @@
   --accent: #e8614a;
   --interactive: #777;
   --interactive-hover: #3d9aff;
-  --post-title-color: #aaa;
+  --post-title-color: #e0e0e0;
+}
+
+/* === TEXT SELECTION === */
+
+::selection {
+  color: #373737;
+}
+
+[data-theme="dark"] ::selection {
+  color: #e0e0e0;
 }
 
 /* === RESET === */
