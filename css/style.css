@@ -1,0 +1,449 @@
+/* === FONTS === */
+
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('/fonts/ApfelGrotezk-Regular.woff2') format('woff2'),
+       url('/fonts/ApfelGrotezk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('/fonts/ApfelGrotezk-Mittel.woff2') format('woff2'),
+       url('/fonts/ApfelGrotezk-Mittel.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('/fonts/ApfelGrotezk-Satt.woff2') format('woff2'),
+       url('/fonts/ApfelGrotezk-Satt.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('/fonts/ApfelGrotezk-Fett.woff2') format('woff2'),
+       url('/fonts/ApfelGrotezk-Fett.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('/fonts/ApfelGrotezk-Brukt.woff2') format('woff2'),
+       url('/fonts/ApfelGrotezk-Brukt.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Excalifont';
+  src: url('/fonts/Excalifont-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === RESET === */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === BASE === */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Apfel Grotezk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #373737;
+  background: #ffffff;
+}
+
+a {
+  color: #373737;
+  text-decoration: none;
+}
+
+/* === LAYOUT === */
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === HEADER === */
+
+.site-header {
+  padding: 60px 0 0;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.logo-ai {
+  font-family: 'Apfel Grotezk', sans-serif;
+  font-weight: 700;
+}
+
+.logo-ing {
+  font-family: 'Excalifont', cursive;
+  font-weight: normal;
+  position: relative;
+  top: 1px;
+}
+
+.site-subtitle {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #ABABAB;
+  font-weight: 400;
+}
+
+.site-subtitle a {
+  color: #ABABAB;
+  border-bottom: 1px solid #e5e5e5;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-subtitle a:hover {
+  color: #373737;
+  border-color: #373737;
+}
+
+/* === POST LIST (homepage) === */
+
+.post-list {
+  margin-top: 56px;
+  list-style: none;
+}
+
+.post-item {
+  padding: 28px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.post-item:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.post-item-link {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.post-item-link:hover {
+  opacity: 0.7;
+}
+
+.post-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #373737;
+}
+
+.post-meta {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #ABABAB;
+  font-weight: 400;
+}
+
+.post-desc {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #6b6b6b;
+  line-height: 1.5;
+}
+
+/* === ARTICLE (post page) === */
+
+.article-header {
+  padding: 60px 0 0;
+}
+
+.article-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.article-date {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #ABABAB;
+}
+
+/* === AUDIO PLAYER === */
+
+.audio-section {
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: #F8F8F8;
+  border-radius: 12px;
+}
+
+.audio-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ABABAB;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.audio-player {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Webkit audio styling */
+audio::-webkit-media-controls-panel {
+  background: #F2F2F2;
+  border-radius: 8px;
+}
+
+audio::-webkit-media-controls-play-button {
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #ABABAB;
+}
+
+/* === ARTICLE CONTENT === */
+
+.article-content {
+  margin-top: 40px;
+}
+
+.article-content p {
+  margin-bottom: 24px;
+}
+
+.article-content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.article-content h3 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.article-content li {
+  margin-bottom: 8px;
+}
+
+.article-content blockquote {
+  border-left: 3px solid #e5e5e5;
+  padding-left: 20px;
+  margin: 24px 0;
+  color: #6b6b6b;
+  font-style: italic;
+}
+
+.article-content code {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  background: #F2F2F2;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.article-content pre {
+  background: #F8F8F8;
+  padding: 20px 24px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.article-content pre code {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.article-content a {
+  color: #d54d33;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.article-content a:hover {
+  border-bottom-color: #d54d33;
+}
+
+.article-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 48px 0;
+}
+
+/* === SILICON'S TAKE === */
+
+.silicon-take {
+  margin-top: 48px;
+  padding: 28px 28px;
+  background: #F8F8F8;
+  border-left: 3px solid #d54d33;
+  border-radius: 0 12px 12px 0;
+}
+
+.silicon-take-header {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #d54d33;
+  margin-bottom: 12px;
+}
+
+.silicon-take p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+}
+
+.silicon-take p:last-child {
+  margin-bottom: 0;
+}
+
+/* === BACK LINK === */
+
+.back-link {
+  display: inline-block;
+  margin-top: 56px;
+  font-size: 15px;
+  color: #ABABAB;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.back-link:hover {
+  color: #373737;
+}
+
+.back-link::before {
+  content: '\2190';
+  margin-right: 6px;
+}
+
+/* === FOOTER === */
+
+.site-footer {
+  margin-top: 80px;
+  padding: 32px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #ABABAB;
+}
+
+.footer-text a {
+  color: #ABABAB;
+  border-bottom: 1px solid #e5e5e5;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.footer-text a:hover {
+  color: #373737;
+  border-color: #373737;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 40px 0 0;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .post-list {
+    margin-top: 40px;
+  }
+
+  .post-item {
+    padding: 24px 0;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .article-header {
+    padding: 40px 0 0;
+  }
+
+  .article-title {
+    font-size: 28px;
+  }
+
+  .article-content {
+    margin-top: 32px;
+  }
+
+  .silicon-take {
+    padding: 24px 20px;
+  }
+
+  .audio-section {
+    padding: 16px 20px;
+  }
+
+  .site-footer {
+    margin-top: 56px;
+  }
+}
