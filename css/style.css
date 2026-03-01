@@ -49,13 +49,13 @@
 /* === TEXT SELECTION === */
 
 ::selection {
-  background-color: #90d5ff;
-  color: #373737;
+  background-color: #047AFE;
+  color: #ffffff;
 }
 
 [data-theme="dark"] ::selection {
-  background-color: #42aded;
-  color: #e0e0e0;
+  background-color: #047AFE;
+  color: #ffffff;
 }
 
 /* === RESET === */
