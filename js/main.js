@@ -1,32 +1,31 @@
 // === THEME TOGGLE ===
 
-(function() {
-  var saved = localStorage.getItem('theme');
-  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-})();
-
 function initTheme() {
-  var toggle = document.getElementById('themeToggle');
-  if (!toggle) return;
+  var toggles = document.querySelectorAll('.theme-toggle');
+  if (!toggles.length) return;
 
   var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  updateToggleIcon(isDark);
+  updateToggleIcons(isDark);
 
-  toggle.addEventListener('click', function() {
-    isDark = !isDark;
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateToggleIcon(isDark);
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      isDark = !isDark;
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcons(isDark);
+    });
   });
 }
 
-function updateToggleIcon(isDark) {
-  var sun = document.querySelector('.icon-sun');
-  var moon = document.querySelector('.icon-moon');
-  if (sun && moon) {
-    sun.style.display = isDark ? 'none' : 'block';
-    moon.style.display = isDark ? 'block' : 'none';
-  }
+function updateToggleIcons(isDark) {
+  document.querySelectorAll('.theme-toggle').forEach(function(toggle) {
+    var sun = toggle.querySelector('.icon-sun');
+    var moon = toggle.querySelector('.icon-moon');
+    if (sun && moon) {
+      sun.style.display = isDark ? 'none' : 'block';
+      moon.style.display = isDark ? 'block' : 'none';
+    }
+  });
 }
 
 // === NAVBAR - HOMEPAGE (IntersectionObserver) ===
