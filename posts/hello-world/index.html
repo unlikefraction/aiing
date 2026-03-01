@@ -3,34 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello, World - AI-ing</title>
-  <meta name="description" content="This is AI-ing. A place where I share everything I learn and do with AI.">
+  <title>Hello, World - AIing</title>
+  <meta name="description" content="This is AIing. A place where I share everything I learn and do with AI.">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%C2%B0</text></svg>">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AIing RSS Feed" href="/feed.xml">
 </head>
 <body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <span class="logo-ai">AI</span><span class="logo-ing">ing</span>
+      </a>
+      <div class="navbar-right">
+        <a href="/feed.xml" class="navbar-link">RSS</a>
+        <a href="https://unlikefraction.com" target="_blank" class="navbar-link">unlikefraction</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
 
     <header class="article-header">
-      <a href="/" class="logo">
-        <span class="logo-ai">AI</span><span class="logo-ing">-ing</span>
-      </a>
       <h1 class="article-title">Hello, World</h1>
       <time class="article-date" datetime="2026-03-01">March 1, 2026</time>
+
+      <button class="raw-audio-toggle" id="audioToggle" onclick="toggleAudio()">Raw Audio</button>
+      <div class="raw-audio-panel" id="audioPanel">
+        <div class="raw-audio-panel-inner">
+          <div class="custom-audio" data-src="audio.mp3">
+            <button class="audio-play-btn" aria-label="Play">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+              <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+            </button>
+            <div class="audio-progress-wrap">
+              <div class="audio-progress">
+                <div class="audio-progress-bar"></div>
+              </div>
+              <span class="audio-time">0:00 / 0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!--
-    <section class="audio-section">
-      <p class="audio-label">Raw recording</p>
-      <audio class="audio-player" controls preload="metadata">
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </section>
-    -->
-
     <article class="article-content">
-      <p>This is AI-ing. A place where I share everything I learn and do with AI. Raw thoughts, voice recordings turned into posts, and Silicon's perspective on all of it.</p>
+      <p>This is AIing. A place where I share everything I learn and do with AI. Raw thoughts, voice recordings turned into posts, and Silicon's perspective on all of it.</p>
 
       <p>I've been using AI every single day for over a year now. Not as a novelty, not as a side experiment &mdash; as the core of how I work. And through that, I've learned things that don't fit in a tweet or a demo video.</p>
 
@@ -51,9 +74,11 @@
     <a href="/" class="back-link">All posts</a>
 
     <footer class="site-footer">
-      <p class="footer-text">&deg;/&deg; <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
+      <p class="footer-text">&deg;/&deg; part of <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
     </footer>
 
   </div>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AIing</title>
+    <link>https://aiing.unlikefraction.com</link>
+    <description>Practical things about using AI. Learnings, raw voice recordings turned into posts, and Silicon's take on all of it.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://aiing.unlikefraction.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Hello, World</title>
+      <link>https://aiing.unlikefraction.com/posts/hello-world/</link>
+      <guid>https://aiing.unlikefraction.com/posts/hello-world/</guid>
+      <pubDate>Sat, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <description>This is AIing. A place where I share everything I learn and do with AI. Raw thoughts, voice recordings turned into posts, and Silicon's perspective on all of it.</description>
+    </item>
+
+  </channel>
+</rss>

@@ -3,17 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI-ing</title>
+  <title>AIing</title>
   <meta name="description" content="Practical things about using AI. Learnings, raw voice recordings turned into posts, and Silicon's take on all of it.">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%C2%B0</text></svg>">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AIing RSS Feed" href="/feed.xml">
 </head>
 <body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <span class="logo-ai">AI</span><span class="logo-ing">ing</span>
+      </a>
+      <div class="navbar-right">
+        <a href="/feed.xml" class="navbar-link">RSS</a>
+        <a href="https://unlikefraction.com" target="_blank" class="navbar-link">unlikefraction</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
 
     <header class="site-header">
       <a href="/" class="logo">
-        <span class="logo-ai">AI</span><span class="logo-ing">-ing</span>
+        <span class="logo-ai">AI</span><span class="logo-ing">ing</span>
       </a>
       <p class="site-subtitle">by <a href="https://unlikefraction.com" target="_blank">Shubham</a> / <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
     </header>
@@ -25,7 +43,7 @@
           <a href="/posts/hello-world/" class="post-item-link">
             <h2 class="post-title">Hello, World</h2>
             <time class="post-meta" datetime="2026-03-01">March 1, 2026</time>
-            <p class="post-desc">This is AI-ing. Raw thoughts, voice recordings, and Silicon's perspective.</p>
+            <p class="post-desc">This is AIing. Raw thoughts, voice recordings, and Silicon's perspective.</p>
           </a>
         </li>
 
@@ -33,9 +51,11 @@
     </main>
 
     <footer class="site-footer">
-      <p class="footer-text">&deg;/&deg; <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
+      <p class="footer-text">&deg;/&deg; part of <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
     </footer>
 
   </div>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
