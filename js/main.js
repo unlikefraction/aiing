@@ -29,9 +29,32 @@ function updateToggleIcon(isDark) {
   }
 }
 
-// === NAVBAR AUTO-HIDE ===
+// === NAVBAR - HOMEPAGE (IntersectionObserver) ===
 
-function initNavbar() {
+function initHeroObserver() {
+  var hero = document.getElementById('hero');
+  var navbar = document.getElementById('navbar');
+  if (!hero || !navbar) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+    });
+  }, { threshold: 0 });
+
+  observer.observe(hero);
+}
+
+// === NAVBAR - POST PAGE (scroll direction) ===
+
+function initPostNavbar() {
+  var hero = document.getElementById('hero');
+  if (hero) return; // homepage uses IntersectionObserver instead
+
   var navbar = document.getElementById('navbar');
   if (!navbar) return;
 
@@ -52,6 +75,23 @@ function initNavbar() {
       });
       ticking = true;
     }
+  });
+}
+
+// === SHARE BUTTON ===
+
+function sharePost() {
+  var btn = document.getElementById('shareBtn');
+  if (!btn) return;
+
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var original = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 2000);
   });
 }
 
@@ -137,6 +177,7 @@ function initAudioPlayers() {
 
 document.addEventListener('DOMContentLoaded', function() {
   initTheme();
-  initNavbar();
+  initHeroObserver();
+  initPostNavbar();
   initAudioPlayers();
 });

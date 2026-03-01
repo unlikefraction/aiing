@@ -14,7 +14,8 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="/" class="navbar-logo">
-        <span class="logo-ai">AI</span><span class="logo-ing">ing</span>
+        <img src="/aiing-logo-light.svg" alt="AIing" class="theme-logo-light">
+        <img src="/aiing-logo-dark.svg" alt="AIing" class="theme-logo-dark">
       </a>
       <div class="navbar-right">
         <a href="/feed.xml" class="navbar-link">RSS</a>
@@ -29,23 +30,30 @@
 
   <div class="container">
 
+    <div class="article-spacer"></div>
+
     <header class="article-header">
       <h1 class="article-title">Hello, World</h1>
-      <time class="article-date" datetime="2026-03-01">March 1, 2026</time>
+      <div class="article-meta-row">
+        <time class="article-date" datetime="2026-03-01">March 1, 2026</time>
+        <button class="share-btn" id="shareBtn" onclick="sharePost()">Share</button>
+      </div>
 
-      <button class="raw-audio-toggle" id="audioToggle" onclick="toggleAudio()">Raw Audio</button>
-      <div class="raw-audio-panel" id="audioPanel">
-        <div class="raw-audio-panel-inner">
-          <div class="custom-audio" data-src="audio.mp3">
-            <button class="audio-play-btn" aria-label="Play">
-              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
-              <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
-            </button>
-            <div class="audio-progress-wrap">
-              <div class="audio-progress">
-                <div class="audio-progress-bar"></div>
+      <div class="raw-audio-section" data-has-audio="false">
+        <button class="raw-audio-toggle" id="audioToggle" onclick="toggleAudio()">Raw Audio</button>
+        <div class="raw-audio-panel" id="audioPanel">
+          <div class="raw-audio-panel-inner">
+            <div class="custom-audio" data-src="audio.mp3">
+              <button class="audio-play-btn" aria-label="Play">
+                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="audio-progress-wrap">
+                <div class="audio-progress">
+                  <div class="audio-progress-bar"></div>
+                </div>
+                <span class="audio-time">0:00 / 0:00</span>
               </div>
-              <span class="audio-time">0:00 / 0:00</span>
             </div>
           </div>
         </div>
@@ -71,7 +79,17 @@
       </div>
     </article>
 
-    <a href="/" class="back-link">All posts</a>
+    <div class="all-posts-section">
+      <p class="all-posts-heading">All Posts</p>
+      <ul class="post-list">
+        <li class="post-item">
+          <a href="/posts/hello-world/" class="post-item-link">
+            <h2 class="post-title">Hello, World</h2>
+            <time class="post-meta" datetime="2026-03-01">March 1, 2026</time>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <footer class="site-footer">
       <p class="footer-text">&deg;/&deg; part of <a href="https://unlikefraction.com" target="_blank">unlikefraction</a></p>
